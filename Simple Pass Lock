@@ -1,0 +1,26 @@
+function page()
+  term.clear()
+  term.setCursorPos(1, 1)
+end
+
+page()
+textutils.slowWrite("Please enter the password: ")
+pass = read("*")
+
+if pass == "feedthebeast" then
+page()
+textutils.slowWrite("Welcome Kelan")
+sleep(1)
+page()
+
+elseif pass == "password" then
+page()
+textutils.slowWrite("Welcome User")
+sleep(1)
+page()
+
+else
+textutils.slowWrite("Incorrect password, try again!")
+sleep(1)
+shell.run"pass"
+end
